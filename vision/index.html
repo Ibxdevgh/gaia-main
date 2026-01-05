@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      if (localStorage.getItem("consentMode") === null) {
+        gtag("consent", "default", {
+          functionality_storage: "denied",
+          security_storage: "denied",
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          personalization: "denied",
+        });
+      } else {
+        gtag(
+          "consent",
+          "default",
+          JSON.parse(localStorage.getItem("consentMode"))
+        );
+      }
+    </script>
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NTXJ6R88");
+    </script>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v2.10.15" />
+
+    <meta name="msapplication-TileColor" content="#1e1e1e" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/svg+xml" href="/images/profile-silhouette.svg">
+    <title>Vision | GAIA</title>
+
+    <meta property="og:image" content="/images/seo/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:title" content="GAIA | Vision" />
+
+    <link rel="stylesheet" href="/assets/bundle.004342a1.css" />
+    <link rel="stylesheet" href="/assets/bundle.d9303d95.css" />
+    <link rel="stylesheet" href="/assets/bundle.147b5f6e.css" />
+    <link rel="stylesheet" href="/assets/bundle.8f89c102.css" />
+    <script type="module" src="/assets/bundle.c2377b65.js"></script>
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NTXJ6R88"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <div id="gl">
+      <div class="gl-main-bubble"></div>
+      <div class="gl-image"></div>
+      <div class="gl-landing-image"></div>
+    </div>
+
+    <header class="header">
+      <div class="header-bg"></div>
+      <div class="header-scroll-top"></div>
+
+      <div class="wrap--wide">
+        <div class="header-toggle">
+          <button class="button" aria-label="Open menu">
+            <span class="button-gradient"></span>
+            <span class="button-bg"></span>
+            <span class="button-text-outer">
+              <span class="button-text">
+                <span class="button-text--open">
+                  <span class="button-text-static">Menu</span>
+                  <span class="button-text-hover">Menu</span>
+                </span>
+
+                <span class="button-text button-text--close">
+                  <span class="button-text-static">Close</span>
+                  <span class="button-text-hover">Close</span>
+                </span>
+              </span>
+            </span>
+
+            <span class="button-icon button-icon--menu">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-dasharray="12 0"
+                ></path>
+                <path
+                  d="M0 6H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="header-logo">
+          <a href="/" class="logo" aria-label="GAIA">
+            <img
+              src="/images/gaia-logo.svg"
+              alt="GAIA"
+              width="120"
+              height="20"
+            />
+          </a>
+        </div>
+        <div class="header-nav">
+          <nav class="nav">
+            <div class="nav-cta">
+              <a
+                href="/contact"
+                class="button button--green button button--xs"
+                aria-label="Get in touch"
+              >
+                <span class="button-gradient"></span>
+                <span class="button-bg"></span>
+
+                <span class="button-text">
+                  <span class="button-text-static">Get in touch</span>
+                  <span class="button-text-hover">Get in touch</span>
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="cookies" style="opacity: 0; pointer-events: none">
+      <div class="wrap--narrow">
+        <div class="cookies-banner">
+          <div class="cookies-banner-text">
+            <p>
+              This website uses cookies to ensure you get the best experience.
+              Read all about it in our
+              <a href="/privacy-policy" data-router-ignore>privacy policy</a>.
+            </p>
+          </div>
+          <div class="cookies-banner-buttons">
+            <a
+              href="#"
+              class="button button--purple button button--xs"
+              aria-label="Accept"
+            >
+              <span class="button-gradient"></span>
+              <span class="button-bg"></span>
+
+              <span class="button-text">
+                <span class="button-text-static">Accept</span>
+                <span class="button-text-hover">Accept</span>
+              </span>
+            </a>
+            <a
+              href="#"
+              class="button button--grey button button--xs"
+              aria-label="Refuse"
+            >
+              <span class="button-gradient"></span>
+              <span class="button-bg"></span>
+
+              <span class="button-text">
+                <span class="button-text-static">Refuse</span>
+                <span class="button-text-hover">Refuse</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-main">
+      <main class="page-main-inner">
+        <div data-view="vision" style="opacity: 0">
+          <div data-scroll>
+            <div class="contentpage-hero" data-scroll-item>
+              <div class="gl-dom-bubble gl-dom-bubble-mobile"></div>
+              <div class="wrap--narrow">
+                <div class="contentpage-hero-title">
+                  <h2 class="ts-1">
+                    <span class="line" data-split-char-line>
+                      <span>To</span><span> </span><span>earn</span
+                      ><span> </span><span>attention</span><span>,</span
+                      ><span></span> </span
+                    ><span class="line" data-split-char-line>
+                      <span>we</span><span> </span><span><em>value</em></span
+                      ><span> </span><span>it</span><span>.</span><span></span>
+                    </span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="contentpage-block" data-scroll-item>
+              <div class="wrap--narrow">
+                <div class="contentpage-text">
+                  <div class="lg:grid grid-cols-12 gap-24">
+                    <div
+                      class="col-span-4 col-start-8"
+                      data-animate
+                      data-animate-y="3rem"
+                      data-animate-delay="250"
+                    >
+                      <p>
+                        At AskGaia, we don’t just see users—we see people. Real
+                        people, engaging with blockchain in real time. We bridge
+                        the gap between human behavior and on-chain dynamics,
+                        turning complexity into connection.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contentpage-text">
+                  <div class="lg:grid grid-cols-12 gap-24">
+                    <div
+                      class="col-span-4 col-start-2"
+                      data-animate
+                      data-animate-y="3rem"
+                      data-animate-delay="350"
+                    >
+                      <p>
+                        Our approach? We start by refining your vision into a
+                        conversational strategy that feels intuitive, not
+                        transactional. Every interaction—from the first message
+                        to the final action—is designed to blend warmth with
+                        purpose, even surprising users with moments of delight.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-scroll-item>
+              <div class="contentpage-text contentpage-text--center">
+                <div class="wrap--narrow">
+                  <div class="grid grid-cols-12 gap-24">
+                    <div
+                      class="col-span-10 lg:col-span-8 col-start-2 lg:col-start-3"
+                    >
+                      <div
+                        class="contentpage-hero-title"
+                        data-animate
+                        data-animate-y="3rem"
+                        data-animate-delay="450"
+                      >
+                        <h2 class="ts-2">
+                          To <em class="ts-purple">connect</em> with an
+                          audience, the options are
+                          <em class="ts-green">endless</em>.
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contentpage-block" data-scroll-item>
+              <div class="wrap--narrow">
+                <div class="contentpage-text">
+                  <div class="lg:grid grid-cols-12 gap-24">
+                    <div class="col-span-4 col-start-8">
+                      <p>
+                        The magic lies in the mix: A digital-first interface
+                        that fosters real relationships, powered by Solana’s
+                        speed and Phantom Wallet’s security. This isn’t just
+                        about driving awareness or conversions—it’s about
+                        building trust and loyalty through seamless,
+                        wallet-enabled conversations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contentpage-text">
+                  <div class="lg:grid grid-cols-12 gap-24">
+                    <div class="col-span-4 col-start-2">
+                      <p>
+                        This is the AskGaia difference: An AI chatbot rooted in
+                        ChatGPT and Solana, where every exchange is personal,
+                        immersive, and secure. We’re redefining how brands and
+                        users connect on-chain—one intelligent conversation at a
+                        time
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contentpage-cta" data-scroll-item>
+              <div class="gl-dom-bubble-cta"></div>
+              <div class="wrap--narrow">
+                <div class="lg:grid grid-cols-12 gap-24">
+                  <div class="col-span-7 col-start-3">
+                    <div class="contentpage-cta-title">
+                      <h2 class="ts-1">
+                        <span class="line" data-split-char-line>
+                          <span>Stop</span><span> </span><span>the</span
+                          ><span> </span><span><em>scroll</em></span
+                          ><span>.</span><span></span> </span
+                        ><span class="line" data-split-char-line>
+                          <span>Start</span><span> </span><span>to</span
+                          ><span> </span><span><em>Gaia</em></span
+                          ><span>.</span><span></span>
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="col-span-4 col-start-5">
+                    <div class="contentpage-cta-text text-center">
+                      <div class="ts-p">
+                        <p>
+                          To bridge the gap between briefing and unbelievable
+                          experiences, we put in heart, soul and microchips.
+                        </p>
+                      </div>
+
+                      <a
+                        href="https://askgaia.app"
+                        class="button button--primary button button--md"
+                        aria-label="undefined"
+                      >
+                        <span class="button-gradient"></span>
+                        <span class="button-bg"></span>
+
+                        <span class="button-text">
+                          <span class="button-text-static">Go on, try us</span>
+                          <span class="button-text-hover">Go on, try us</span>
+                        </span>
+
+                        <span class="button-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="12"
+                              cy="12"
+                              r="12"
+                              fill="var(--button-icon-bg)"
+                            ></circle>
+                            <path
+                              d="M11 15L14 12L11 9"
+                              stroke="var(--button-icon-color)"
+                              stroke-width="1.5"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="footer" data-scroll-item>
+              <div class="gl-dom-bubble-target"></div>
+              <div class="footer-screen">
+                <div class="footer-screen-inner">
+                  <div class="footer-top">
+                    <div class="wrap--narrow">
+                      <div class="grid grid-cols-12 gap-12 lg:gap-24">
+                        <div
+                          class="col-span-12 lg:col-span-4 lg:col-start-8 grid grid-cols-2 gap-x-24 gap-y-24 lg:gap-y-56"
+                        >
+                          <div class="footer-info-block">
+                            <div class="ts-eyebrown ts-purple">email</div>
+                            <a class="ts-p" href="mailto:welcome@askgaia.app"
+                              >welcome@askgaia.app</a
+                            >
+                          </div>
+                          <div class="footer-info-block"></div>
+
+                          <!-- <div class="footer-info-block">
+                            <div class="ts-eyebrown ts-purple">Antwerp</div>
+                            <a
+                              href="https://goo.gl/maps/2TokqbjCi3ntZkff6"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="ts-p"
+                            >
+                              Michel de Braeystraat 52<br />
+                              2000 Antwerp<br />
+                              Belgium
+                            </a>
+                          </div>
+
+                          <div class="footer-info-block">
+                            <span class="ts-eyebrown ts-purple">Amsterdam</span>
+                            <a
+                              href="https://goo.gl/maps/Zv2Xcu64DuhGBLKT6"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="ts-p"
+                            >
+                              Vijzelstraat 68-78<br />
+                              1017 HL Amsterdam<br />
+                              Netherlands
+                            </a>
+                          </div> -->
+
+                          <div class="footer-info-block">
+                            <div class="socials">
+                              <div class="ts-eyebrown">Follow us</div>
+                              <ul class="socials-ul">
+                                <li class="socials-li">
+                                  <a
+                                    href="https://x.com/gaia_assistant"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="socials-a"
+                                    aria-label="Twitter/X"
+                                    ><svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M11.9 8.5L19.1 0H17.3L11.1 7.4L6.2 0H0L7.6 11.1L0 20H1.8L8.4 12.2L13.7 20H19.9L11.9 8.5ZM9.2 11.2L8.5 10.2L2.4 1.1H5.3L10.2 8.4L10.9 9.4L17.3 18.8H14.4L9.2 11.2Z"
+                                        fill="currentColor"
+                                      ></path></svg
+                                  ></a>
+                                </li>
+                                <li class="socials-li">
+                                  <a
+                                    href="https://www.askgaia.app/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="socials-a"
+                                    aria-label="GAIA Chat"
+                                    ><svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M10 2C6.69 2 4 4.69 4 8C4 9.89 4.9 11.57 6.29 12.65L5.5 17.5L10.5 16C11 16 11.5 15.95 12 15.85C15.31 15.85 18 13.16 18 9.85C18 6.54 15.31 2 10 2ZM7 9.5C6.17 9.5 5.5 8.83 5.5 8S6.17 6.5 7 6.5S8.5 7.17 8.5 8S7.83 9.5 7 9.5ZM10 9.5C9.17 9.5 8.5 8.83 8.5 8S9.17 6.5 10 6.5S11.5 7.17 11.5 8S10.83 9.5 10 9.5ZM13 9.5C12.17 9.5 11.5 8.83 11.5 8S12.17 6.5 13 6.5S14.5 7.17 14.5 8S13.83 9.5 13 9.5Z"
+                                        fill="currentColor"
+                                      ></path></svg
+                                  ></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="footer-bottom">
+                    <div class="wrap--narrow">
+                      <div class="lg:grid grid-cols-12 gap-x-24">
+                        <div class="col-span-5 col-start-8 flex gap-x-24">
+                          <div class="menu-footer-copyright">
+                            Copyright © 2025 GAIA. All Rights Reserved
+                          </div>
+                          <div class="menu-footer-privacy">
+                            <a href="/privacy-policy">Privacy Policy</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+
+          <div class="js-design-toggle" style="opacity: 0">
+            <img src="/images/dev/vision-m.webp" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <nav class="menu" style="pointer-events: none">
+      <div class="menu-outer" style="opacity: 0">
+        <div class="menu-inner">
+          <ul class="menu-ul">
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/vision"
+                data-link-slug="vision"
+                data-transition="menu"
+                aria-label="Go to vision page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Vision</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Vision</span
+                >
+              </a>
+            </li>
+
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/contact"
+                data-link-slug="contact"
+                data-transition="menu"
+                aria-label="Go to contact page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Get in touch</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Get in touch</span
+                >
+              </a>
+            </li>
+          </ul>
+          <div class="menu-footer">
+            <div class="wrap--wide">
+              <div class="menu-footer-left">
+                <div class="menu-footer-copyright">
+                  Copyright © 2025 GAIA. All Rights Reserved
+                </div>
+                <div class="menu-footer-privacy">
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+              </div>
+              <div class="menu-footer-right">
+                <div class="socials">
+                  <div class="ts-eyebrown">Follow us</div>
+                  <ul class="socials-ul">
+                    <li class="socials-li">
+                      <a
+                        href="https://x.com/gaia_assistant"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="socials-a"
+                        aria-label="Twitter/X"
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.902 8.98L19.35 0h-1.764L11.1 7.784L6.65 0H0l7.808 11.162L0 20.5h1.764l6.84-7.744L13.35 20.5H20l-8.098-11.52zm-2.42 2.74l-.794-1.134L2.32 1.5h2.72l5.092 7.288.794 1.134L16.36 19.25h-2.72L9.482 11.72z"
+                            fill="currentColor"
+                          ></path></svg
+                      ></a>
+                    </li>
+                    <li class="socials-li">
+                      <a
+                        href="https://www.askgaia.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="socials-a"
+                        aria-label="GAIA Chat"
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L17.7071 16.2929C17.8946 16.4804 17.9914 16.7348 17.9914 17C17.9914 17.5523 17.5437 18 16.9914 18H10C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM7 8C6.44772 8 6 8.44772 6 9C6 9.55228 6.44772 10 7 10C7.55228 10 8 9.55228 8 9C8 8.44772 7.55228 8 7 8ZM10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8ZM13 8C12.4477 8 12 8.44772 12 9C12 9.55228 12.4477 10 13 10C13.5523 10 14 9.55228 14 9C14 8.44772 13.5523 8 13 8Z"
+                            fill="currentColor"
+                          ></path></svg
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-overlay">
+        <div class="menu-overlay-layer"></div>
+        <div class="menu-overlay-layer"></div>
+        <div class="menu-overlay-layer"></div>
+      </div>
+    </nav>
+    <div class="preloader" style="opacity: 0">
+      <div class="preloader-icon">
+        <div class="preloader-icon-outer">
+          <div class="preloader-icon-inner">
+            <div class="preloader-icon-logo">
+              <img src="/images/profile-silhouette.svg" alt="GAIA" style="width: 60px; height: 60px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); mix-blend-mode: screen; opacity: 0.9;" />
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="266"
+              height="266"
+              viewBox="0 0 266 266"
+              fill="none"
+            >
+              <defs>
+                <filter
+                  id="filter0_f_821_1681"
+                  x="57"
+                  y="57"
+                  width="152"
+                  height="152"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="8"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter1_f_821_1681"
+                  x="65"
+                  y="65"
+                  width="136"
+                  height="136"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="4"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter2_f_821_1681"
+                  x="0.5"
+                  y="0.5"
+                  width="265"
+                  height="265"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="32.5"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <linearGradient
+                  id="paint0_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint2_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint3_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+              </defs>
+              <g class="preloader-icon-circles-outer">
+                <g class="preloader-icon-circles-inner">
+                  <circle
+                    class="preloader-icon-circle"
+                    cx="133"
+                    cy="133"
+                    r="59.5"
+                    stroke="url(#paint0_linear_821_1681)"
+                  ></circle>
+                  <g filter="url(#filter0_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint1_linear_821_1681)"
+                    ></circle>
+                  </g>
+                  <g filter="url(#filter1_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint2_linear_821_1681)"
+                    ></circle>
+                  </g>
+                  <g filter="url(#filter2_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint3_linear_821_1681)"
+                      stroke-width="15"
+                    ></circle>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="preloader-text">
+        Loading<span class="preloader-text-dots">...</span>
+      </div>
+    </div>
+
+    <div class="page-overlay">
+      <div class="page-overlay-layer-1"></div>
+      <div class="page-overlay-layer-2"></div>
+    </div>
+
+    <script
+      id="hs-script-loader"
+      type="text/javascript"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/143671043.js"
+    ></script>
+  </body>
+</html>

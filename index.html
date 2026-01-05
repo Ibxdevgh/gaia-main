@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      if (localStorage.getItem("consentMode") === null) {
+        gtag("consent", "default", {
+          functionality_storage: "denied",
+          security_storage: "denied",
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          personalization: "denied",
+        });
+      } else {
+        gtag(
+          "consent",
+          "default",
+          JSON.parse(localStorage.getItem("consentMode"))
+        );
+      }
+    </script>
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NTXJ6R88");
+    </script>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v2.10.15" />
+    <!-- <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#1e1e1e"
+    />
+    <link
+      href="/favicon-dark.ico"
+      rel="icon"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      href="/favicon-light.ico"
+      rel="icon"
+      type="image/x-icon"
+      media="(prefers-color-scheme: light)"
+    /> -->
+    <meta name="msapplication-TileColor" content="#1e1e1e" />
+    <!-- <meta name="msapplication-config" content="/favicon/browserconfig.xml" /> -->
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/svg+xml" href="/images/profile-silhouette.svg">
+    <title>GAIA</title>
+    <!-- <meta
+      name="description"
+      content="We are a leading omnichannel brand activation agency helping brands get results by engaging with people in memorable experiences."
+    />
+    <meta
+      name="keywords"
+      content="Omnichannel brand activation agency, Omnichannel merkactivatie bureau, Engaged, Engaged Agency, Brand Activation, Digital Activation, Trade Marketing, Experiential marketing."
+    /> -->
+
+    <meta property="og:image" content="/images/seo/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:title" content="GAIA" />
+    <!-- <meta
+      property="og:description"
+      content="We are a leading omnichannel brand activation agency helping brands get results by engaging with people in memorable experiences."
+    /> -->
+
+    <link rel="stylesheet" href="/assets/bundle.004342a1.css" />
+    <link rel="stylesheet" href="/assets/bundle.d9303d95.css" />
+    <link rel="stylesheet" href="/assets/bundle.147b5f6e.css" />
+    <link rel="stylesheet" href="/assets/bundle.8f89c102.css" />
+    <script type="module" src="/assets/bundle.c2377b65.js"></script>
+
+    <style>
+      #gl {
+        opacity: 1 !important;
+      }
+      .gl-main-bubble {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
+      .bubble-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        pointer-events: none;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        will-change: transform, opacity, visibility;
+      }
+
+      .profile-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        opacity: 0;
+        mix-blend-mode: screen;
+        transition: all 0.5s ease;
+      }
+
+      .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .bubble-container.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .bubble-container.visible .profile-image {
+        opacity: 0.9;
+      }
+
+      @media (max-width: 768px) {
+        .bubble-container {
+          width: 280px;
+          height: 280px;
+          transform: translate(-50%, -50%) scale(0.8);
+        }
+
+        .profile-image {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+        }
+
+        .bubble-container.visible .profile-image {
+          opacity: 0.8;
+        }
+
+        .profile-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .bubble-container {
+          width: 220px;
+          height: 220px;
+          transform: translate(-50%, -50%) scale(0.7);
+        }
+      }
+	  
+
+.ca-container {
+  position: fixed;
+  bottom: 60px;
+  left: 80px;
+  z-index: 999;
+  display: flex;
+  gap: 10px;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Start hidden */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.ca-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ca-coming-soon {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.ca-coming-soon:hover {
+  opacity: 0.9;
+}
+
+.ca-button {
+  background: transparent;
+  border: 1px solid rgba(0, 123, 255, 0.7);
+  color: rgba(0, 123, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.ca-button:hover {
+  background: rgba(0, 123, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.copy-button {
+  background: transparent;
+  border: 1px solid rgba(108, 117, 125, 0.8);
+  color: rgba(108, 117, 125, 0.8);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.copy-button:hover {
+  background: rgba(108, 117, 125, 0.1);
+  border-color: rgba(108, 117, 125, 0.7);
+  color: rgba(255, 255, 125, 0.8);
+  opacity: 0.9;
+}
+
+.copy-button.copied {
+  background: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.7);
+  color: rgba(40, 167, 69, 1);
+}
+
+.copy-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+    </style>
+
+    <script>
+      class BubbleAnimation {
+        constructor() {
+          this.container = document.createElement("div");
+          this.container.className = "bubble-container";
+
+          this.image = document.createElement("div");
+          this.image.className = "profile-image";
+
+          // Create img element for SVG
+          const img = document.createElement("img");
+          img.src = "/images/profile-silhouette.svg";
+          img.alt = "Profile Silhouette";
+          this.image.appendChild(img);
+
+          this.container.appendChild(this.image);
+
+          const mainBubble = document.querySelector(".gl-main-bubble");
+          mainBubble.innerHTML = ""; // Clear existing content
+          mainBubble.appendChild(this.container);
+
+          this.setupEventListeners();
+
+          // Wait for preloader to finish
+          this.waitForPreloader();
+        }
+
+        async waitForPreloader() {
+          // Check if preloader exists and is visible
+          const preloader = document.querySelector(".preloader");
+          if (!preloader) {
+            this.show();
+            return;
+          }
+
+          // Create observer to watch preloader opacity
+          const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+              if (
+                mutation.type === "attributes" &&
+                mutation.attributeName === "style"
+              ) {
+                const opacity = parseFloat(preloader.style.opacity);
+                if (opacity === 0) {
+                  setTimeout(() => this.show(), 500); // Show after preloader fade
+                  observer.disconnect();
+                }
+              }
+            });
+          });
+
+          observer.observe(preloader, {
+            attributes: true,
+            attributeFilter: ["style"],
+          });
+        }
+
+        show() {
+          this.container.classList.add("visible");
+        }
+
+        hide() {
+          this.container.classList.remove("visible");
+        }
+
+        setupEventListeners() {
+          window.addEventListener("scroll", () => this.handleScroll());
+          document.addEventListener("mousemove", (e) =>
+            this.handleMouseMove(e)
+          );
+        }
+
+        handleScroll() {
+          const scrollPercent =
+            window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight);
+          let scale = 1 - scrollPercent * 0.3;
+          const opacity = Math.max(0, 1 - scrollPercent * 1.5);
+
+          // Adjust scale based on screen size
+          if (window.innerWidth <= 768) {
+            scale = 0.8 - scrollPercent * 0.3;
+          }
+          if (window.innerWidth <= 480) {
+            scale = 0.7 - scrollPercent * 0.3;
+          }
+
+          this.container.style.transform = `translate(-50%, -50%) scale(${scale})`;
+          this.container.style.opacity = opacity;
+
+          if (opacity < 0.01) {
+            this.hide();
+          } else if (this.container.style.visibility !== "hidden") {
+            this.show();
+          }
+        }
+
+        handleMouseMove(e) {
+          if (!this.container.classList.contains("visible")) return;
+
+          const rect = this.container.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+
+          const deltaX = (e.clientX - centerX) / window.innerWidth;
+          const deltaY = (e.clientY - centerY) / window.innerHeight;
+
+          const moveX = deltaX * 20;
+          const moveY = deltaY * 20;
+
+          this.image.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+        }
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === "loading") {
+        document.addEventListener(
+          "DOMContentLoaded",
+          () => new BubbleAnimation()
+        );
+      } else {
+        new BubbleAnimation();
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NTXJ6R88"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <div id="gl">
+      <div
+        class="gl-main-bubble"
+        style="width: 100vw; height: 100vh; opacity: 0"
+      ></div>
+      <div class="gl-image"></div>
+      <div class="gl-landing-image"></div>
+      <!-- Profile SVG integrated as WebGL texture -->
+    </div>
+
+    <header class="header">
+      <div class="header-bg"></div>
+      <div class="header-scroll-top"></div>
+
+      <div class="wrap--wide">
+        <div class="header-toggle">
+          <button class="button" aria-label="Open menu">
+            <span class="button-gradient"></span>
+            <span class="button-bg"></span>
+            <span class="button-text-outer">
+              <span class="button-text">
+                <span class="button-text--open">
+                  <span class="button-text-static">Menu</span>
+                  <span class="button-text-hover">Menu</span>
+                </span>
+
+                <span class="button-text button-text--close">
+                  <span class="button-text-static">Close</span>
+                  <span class="button-text-hover">Close</span>
+                </span>
+              </span>
+            </span>
+
+            <span class="button-icon button-icon--menu">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-dasharray="12 0"
+                ></path>
+                <path
+                  d="M0 6H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="header-logo">
+          <a href="/" class="logo" aria-label="GAIA">
+            <img
+              src="/images/gaia-logo.svg"
+              alt="GAIA"
+              width="120"
+              height="20"
+            />
+          </a>
+        </div>
+        <div class="header-nav">
+          <nav class="nav">
+            <div class="nav-cta">
+              <a
+                href="/contact"
+                class="button button--green button button--xs"
+                aria-label="Get in touch"
+              >
+                <span class="button-gradient"></span>
+                <span class="button-bg"></span>
+
+                <span class="button-text">
+                  <span class="button-text-static">Get in touch</span>
+                  <span class="button-text-hover">Get in touch</span>
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="cookies" style="opacity: 0; pointer-events: none">
+      <div class="wrap--narrow">
+        <div class="cookies-banner">
+          <div class="cookies-banner-text">
+            <p>
+              This website uses cookies to ensure you get the best experience.
+              Read all about it in our
+              <a href="/privacy-policy" data-router-ignore>privacy policy</a>.
+            </p>
+          </div>
+          <div class="cookies-banner-buttons">
+            <a
+              href="#"
+              class="button button--purple button button--xs"
+              aria-label="Accept"
+            >
+              <span class="button-gradient"></span>
+              <span class="button-bg"></span>
+
+              <span class="button-text">
+                <span class="button-text-static">Accept</span>
+                <span class="button-text-hover">Accept</span>
+              </span>
+            </a>
+            <a
+              href="#"
+              class="button button--grey button button--xs"
+              aria-label="Refuse"
+            >
+              <span class="button-gradient"></span>
+              <span class="button-bg"></span>
+
+              <span class="button-text">
+                <span class="button-text-static">Refuse</span>
+                <span class="button-text-hover">Refuse</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-main">
+      <main class="page-main-inner">
+        <div class="home" data-view="home" style="opacity: 0">
+          <div data-scroll data-scroll-shim>
+            <div data-scroll-item class="landing-intro">
+              <div class="gl-dom-bubble gl-dom-bubble-mobile"></div>
+              <div class="landing-intro-screen">
+                <div class="landing-intro-content">
+                  <div class="wrap--narrow">
+                    <div class="landing-intro-content-inner">
+                      <h2 class="landing-intro-title ts-1">
+                        <span class="line" data-split-char-line>
+                          <span>No</span><span> </span><span> </span
+                          ><span><em>Dashboards</em></span
+                          ><span>.</span><span></span> </span
+                        ><span class="line" data-split-char-line>
+                          <span>Just</span><span> </span> <span> </span
+                          ><span><em>GAIA</em></span
+                          ><span>.</span><span></span>
+                        </span>
+                      </h2>
+
+                      <div class="landing-intro-buttons">
+                        <a
+                          href="#reel"
+                          class="button button--primary button button--md"
+                          aria-label="Watch our reel"
+                        >
+                          <span class="button-gradient"></span>
+                          <span class="button-bg"></span>
+
+                          <span class="button-text">
+                            <span class="button-text-static"
+                              >Watch our reel</span
+                            >
+                            <span class="button-text-hover"
+                              >Watch our reel</span
+                            >
+                          </span>
+
+                          <span class="button-icon">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="12"
+                                fill="var(--button-icon-bg)"
+                              ></circle>
+                              <path
+                                fill="var(--button-icon-color)"
+                                d="M10.5 14.3981V9.60188C10.5 9.1723 11.006 8.94271 11.3293 9.22559L14.07 11.6237C14.2976 11.8229 14.2976 12.1771 14.07 12.3763L11.3293 14.7744C11.006 15.0573 10.5 14.8277 10.5 14.3981Z"
+                              ></path>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+
+                      <div class="landing-intro-text">
+                        <p class="ts-p" data-split-lines>
+                          We are a leading blockchain interaction platform
+                          helping users engage <br />
+                          with the Solana ecosystem through seamless, AI-powered
+                          chat<br />
+                          experiences. <a href="/vision">Read our vision.</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="landing-intro-footer">
+                  <div class="wrap--narrow">
+                    <div class="landing-intro-footer-cta">
+                      <div class="scroll-cta">
+                        <div class="scroll-cta-icon">
+                          <img
+                            src="/images/template/scroll-cta-icon.svg"
+                            alt="Scroll cta icon"
+                          />
+                        </div>
+                        <div class="scroll-cta-text ts-eyebrown">Scroll</div>
+                      </div>
+                    </div>
+                    <div class="landing-intro-clients">
+                      <div class="ts-eyebrown">Trusted by</div>
+                      <div class="landing-intro-clients-container">
+                        <div class="landing-intro-client">
+                          <div
+                            class="landing-intro-client-inner"
+                            style="
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                            "
+                          >
+                            <img
+                              src="/images/logos/solana-sol-logo.svg"
+                              alt="Logo solana-sol-logo.svg"
+                              style="width: 50%"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-scroll-item class="landing-vision">
+              <div class="landing-vision-screen">
+                <div class="landing-vision-content">
+                  <div class="wrap--narrow">
+                    <div class="lg:grid grid-cols-12 gap-x-24">
+                      <div class="col-span-7 lg:col-start-3">
+                        <div class="landing-vision-title">
+                          <h2 class="ts-1">
+                            <span class="line" data-split-char-line>
+                              <span>To</span><span> </span><span>earn</span
+                              ><span> </span><span>attention</span> </span
+                            ><span class="line" data-split-char-line>
+                              <span>we</span><span> </span
+                              ><span><em>value</em></span
+                              ><span> </span><span>it</span><span>.</span
+                              ><span></span>
+                            </span>
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="col-span-4 col-start-7">
+                        <div class="landing-vision-text">
+                          <p class="ts-p-sm" data-split-lines>
+                            We make it personal. We inspire users to engage—and,
+                            <br />
+                            importantly, to feel their time was well spent.
+                            Beyond<br />
+                            just delivering blockchain data, we refine the
+                            experience, <br />
+                            add intuitive simplicity, and transform complexity
+                            into dynamic,
+                            <em> AI-powered conversations.</em><br />
+                            Our goal? To spark trust and drive meaningful
+                            interactions. <br />
+                            Because while transactions can be automated, trust
+                            must be earned.<br />
+                          </p>
+                        </div>
+
+                        <a
+                          href="https://askgaia.app "
+                          class="button button--outlined button button--md button--icon-green"
+                          aria-label="undefined"
+                        >
+                          <span class="button-gradient"></span>
+                          <span class="button-bg"></span>
+
+                          <span class="button-text">
+                            <span class="button-text-static"
+                              >Stop the scroll, start to gaia</span
+                            >
+                            <span class="button-text-hover"
+                              >Stop the scroll, start to gaia</span
+                            >
+                          </span>
+
+                          <span class="button-icon">
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="12"
+                                fill="var(--button-icon-bg)"
+                              ></circle>
+                              <path
+                                d="M11 15L14 12L11 9"
+                                stroke="var(--button-icon-color)"
+                                stroke-width="1.5"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <footer class="footer" data-scroll-item>
+              <div class="gl-dom-bubble" data-gl-parallax-bottom></div>
+
+              <div class="footer-screen">
+                <div class="footer-screen-inner">
+                  <div class="footer-top">
+                    <div class="wrap--narrow">
+                      <div class="grid grid-cols-12 gap-12 lg:gap-24">
+                        <div
+                          class="col-span-12 lg:col-span-4 lg:col-start-8 grid grid-cols-2 gap-x-24 gap-y-24 lg:gap-y-56"
+                        >
+                          <div class="footer-info-block">
+                            <div class="ts-eyebrown ts-purple">email</div>
+                            <a class="ts-p" href="mailto:welcome@askgaia.app"
+                              >welcome@askgaia.app</a
+                            >
+                          </div>
+                          <div class="footer-info-block"></div>
+
+                          <div class="footer-info-block">
+                            <div class="socials">
+                              <div class="ts-eyebrown">Follow us</div>
+                              <ul class="socials-ul">
+                                <li class="socials-li">
+                                  <a
+                                    href="https://x.com/gaia_assistant"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="socials-a"
+                                    aria-label="Twitter/X"
+                                    ><svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M11.902 8.98L19.35 0h-1.764L11.1 7.784L6.65 0H0l7.808 11.162L0 20.5h1.764l6.84-7.744L13.35 20.5H20l-8.098-11.52zm-2.42 2.74l-.794-1.134L2.32 1.5h2.72l5.092 7.288.794 1.134L16.36 19.25h-2.72L9.482 11.72z"
+                                        fill="currentColor"
+                                      ></path></svg
+                                  ></a>
+                                </li>
+                                <li class="socials-li">
+                                  <a
+                                    href="https://www.askgaia.app/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="socials-a"
+                                    aria-label="GAIA Chat"
+                                    ><svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L17.7071 16.2929C17.8946 16.4804 17.9914 16.7348 17.9914 17C17.9914 17.5523 17.5437 18 16.9914 18H10C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM7 8C6.44772 8 6 8.44772 6 9C6 9.55228 6.44772 10 7 10C7.55228 10 8 9.55228 8 9C8 8.44772 7.55228 8 7 8ZM10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8ZM13 8C12.4477 8 12 8.44772 12 9C12 9.55228 12.4477 10 13 10C13.5523 10 14 9.55228 14 9C14 8.44772 13.5523 8 13 8Z"
+                                        fill="currentColor"
+                                      ></path></svg
+                                  ></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="footer-bottom">
+                    <div class="wrap--narrow">
+                      <div class="lg:grid grid-cols-12 gap-x-24">
+                        <div class="col-span-5 col-start-8 flex gap-x-24">
+                          <div class="menu-footer-copyright">
+                            Copyright © 2025 GAIA. All Rights Reserved
+                          </div>
+                          <div class="menu-footer-privacy">
+                            <a href="/privacy-policy">Privacy Policy</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+          <div class="reel-video" style="opacity: 0; pointer-events: none">
+            <div class="reel-video-outer">
+              <div class="reel-video-inner">
+                <div class="video is-muted">
+                  <video
+                    poster="/videos/reel/engaged-reel.webp"
+                    src="/videos/reel/engaged-reel.mp4"
+                    disablepictureinpicture
+                    muted
+                    loop
+                    playsinline
+                  ></video>
+                  <div class="video-controls">
+                    <div class="video-controls-buttons">
+                      <div class="video-controls-playback">
+                        <div class="video-controls-playback-icon -play">
+                          <svg
+                            width="7"
+                            height="10"
+                            viewBox="0 0 7 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0.75 8.59717V1.40283C0.75 0.758457 1.50894 0.414074 1.99388 0.838394L6.10493 4.43557C6.44643 4.73438 6.44643 5.26562 6.10493 5.56443L1.99388 9.16161C1.50894 9.58593 0.75 9.24154 0.75 8.59717Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="video-controls-playback-icon -pause">
+                          <svg
+                            width="6"
+                            height="8"
+                            viewBox="0 0 6 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 0V8"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            ></path>
+                            <path
+                              d="M5 0V8"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="video-controls-progress">
+                        <progress
+                          class="video-controls-progress-bar"
+                          value="0"
+                        ></progress>
+                        <label
+                          for="v-seek"
+                          class="video-controls-progress-seek-label"
+                          >Video Progress</label
+                        >
+                        <input
+                          id="v-seek"
+                          class="video-controls-progress-seek"
+                          value="0"
+                          min="0"
+                          type="range"
+                          step=".001"
+                        />
+
+                        <div class="video-controls-time">
+                          <div class="video-controls-time-current">00:00</div>
+                        </div>
+                      </div>
+
+                      <div class="video-controls-right">
+                        <div class="video-controls-right-inner">
+                          <div class="video-controls-mute">
+                            <svg
+                              width="17"
+                              height="10"
+                              viewBox="0 0 17 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 6.53068V3.87574C0 3.5996 0.223858 3.37574 0.5 3.37574H2.07786C2.23831 3.37574 2.38901 3.29874 2.48303 3.16872L4.62466 0.207019C4.71868 0.0770003 4.86938 0 5.02983 0H6.5C6.77614 0 7 0.223858 7 0.5V9.5C7 9.77614 6.77614 10 6.5 10H5.01058C4.86103 10 4.71932 9.93305 4.62435 9.81752L2.48335 7.21316C2.38837 7.09763 2.24667 7.03068 2.09711 7.03068H0.5C0.223857 7.03068 0 6.80682 0 6.53068Z"
+                                fill="currentColor"
+                              ></path>
+
+                              <g class="active">
+                                <mask
+                                  id="mask0_2_19"
+                                  style="mask-type: alpha"
+                                  maskUnits="userSpaceOnUse"
+                                  x="8"
+                                  y="2"
+                                  width="8"
+                                  height="8"
+                                >
+                                  <circle
+                                    cx="12"
+                                    cy="6"
+                                    r="4"
+                                    fill="#FCFEEA"
+                                  ></circle>
+                                </mask>
+                                <g mask="url(#mask0_2_19)">
+                                  <circle
+                                    cx="6"
+                                    cy="6"
+                                    r="5.25"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                  ></circle>
+                                </g>
+                                <mask
+                                  id="mask1_2_19"
+                                  style="mask-type: alpha"
+                                  maskUnits="userSpaceOnUse"
+                                  x="9"
+                                  y="1"
+                                  width="10"
+                                  height="10"
+                                >
+                                  <circle
+                                    cx="14"
+                                    cy="6"
+                                    r="5"
+                                    fill="#FCFEEA"
+                                  ></circle>
+                                </mask>
+                                <g mask="url(#mask1_2_19)">
+                                  <circle
+                                    cx="6"
+                                    cy="6"
+                                    r="8.25"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                  ></circle>
+                                </g>
+                              </g>
+
+                              <g class="muted">
+                                <path
+                                  d="M10.1719 7.82812L15.8287 2.17127"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                ></path>
+                                <path
+                                  d="M15.8281 7.82812L10.1713 2.17127"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                ></path>
+                              </g>
+                            </svg>
+                          </div>
+                          <div class="video-controls-fullscreen">
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M5.5 1.5H1.5V5.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M8.5 12.5L12.5 12.5L12.5 8.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M12.5 5.5L12.5 1.5L8.5 1.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M1.5 8.5L1.5 12.5L5.5 12.5"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reel-video-header">
+              <div class="wrap--wide">
+                <div class="reel-video-close">
+                  <button class="button button--close" aria-label="Close">
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+                    <span class="button-text-outer">
+                      <span class="button-text">
+                        <span class="button-text button-text--close">
+                          <span class="button-text-static">Close</span>
+                          <span class="button-text-hover">Close</span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="button-icon button-icon--menu">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0 6H12"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-dasharray="12 0"
+                        ></path>
+                        <path
+                          d="M0 6H12"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        ></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-design-toggle" style="opacity: 0">
+            <img src="/images/dev/home-work-hover.webp" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <nav class="menu" style="pointer-events: none">
+      <div class="menu-outer" style="opacity: 0">
+        <div class="menu-inner">
+          <ul class="menu-ul">
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/vision"
+                data-link-slug="vision"
+                data-transition="menu"
+                aria-label="Go to vision page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Vision</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Vision</span
+                >
+              </a>
+            </li>
+
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/contact"
+                data-link-slug="contact"
+                data-transition="menu"
+                aria-label="Go to contact page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Get in touch</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Get in touch</span
+                >
+              </a>
+            </li>
+          </ul>
+          <div class="menu-footer">
+            <div class="wrap--wide">
+              <div class="menu-footer-left">
+                <div class="menu-footer-copyright">
+                  Copyright © 2025 GAIA. All Rights Reserved
+                </div>
+                <div class="menu-footer-privacy">
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+              </div>
+              <div class="menu-footer-right">
+                <div class="socials">
+                  <div class="ts-eyebrown">Follow us</div>
+                  <ul class="socials-ul">
+                    <li class="socials-li">
+                      <a
+                        href="https://x.com/gaia_assistant"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="socials-a"
+                        aria-label="Twitter/X"
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.902 8.98L19.35 0h-1.764L11.1 7.784L6.65 0H0l7.808 11.162L0 20.5h1.764l6.84-7.744L13.35 20.5H20l-8.098-11.52zm-2.42 2.74l-.794-1.134L2.32 1.5h2.72l5.092 7.288.794 1.134L16.36 19.25h-2.72L9.482 11.72z"
+                            fill="currentColor"
+                          ></path></svg
+                      ></a>
+                    </li>
+                    <li class="socials-li">
+                      <a
+                        href="https://www.askgaia.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="socials-a"
+                        aria-label="GAIA Chat"
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L17.7071 16.2929C17.8946 16.4804 17.9914 16.7348 17.9914 17C17.9914 17.5523 17.5437 18 16.9914 18H10C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM7 8C6.44772 8 6 8.44772 6 9C6 9.55228 6.44772 10 7 10C7.55228 10 8 9.55228 8 9C8 8.44772 7.55228 8 7 8ZM10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8ZM13 8C12.4477 8 12 8.44772 12 9C12 9.55228 12.4477 10 13 10C13.5523 10 14 9.55228 14 9C14 8.44772 13.5523 8 13 8Z"
+                            fill="currentColor"
+                          ></path></svg
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-overlay">
+        <div class="menu-overlay-layer"></div>
+        <div class="menu-overlay-layer"></div>
+        <div class="menu-overlay-layer"></div>
+      </div>
+    </nav>
+    <div class="preloader" style="opacity: 0">
+      <div class="preloader-icon">
+        <div class="preloader-icon-outer">
+          <div class="preloader-icon-inner">
+            <div class="preloader-icon-logo">
+              <img
+                src="/images/profile-silhouette.svg"
+                alt="GAIA"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  mix-blend-mode: screen;
+                  opacity: 0.9;
+                "
+              />
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="266"
+              height="266"
+              viewBox="0 0 266 266"
+              fill="none"
+            >
+              <defs>
+                <filter
+                  id="filter0_f_821_1681"
+                  x="57"
+                  y="57"
+                  width="152"
+                  height="152"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="8"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter1_f_821_1681"
+                  x="65"
+                  y="65"
+                  width="136"
+                  height="136"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="4"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter2_f_821_1681"
+                  x="0.5"
+                  y="0.5"
+                  width="265"
+                  height="265"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="32.5"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <linearGradient
+                  id="paint0_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint2_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint3_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+              </defs>
+              <g class="preloader-icon-circles-outer">
+                <g class="preloader-icon-circles-inner">
+                  <circle
+                    class="preloader-icon-circle"
+                    cx="133"
+                    cy="133"
+                    r="59.5"
+                    stroke="url(#paint0_linear_821_1681)"
+                  ></circle>
+                  <g filter="url(#filter0_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint1_linear_821_1681)"
+                    ></circle>
+                  </g>
+                  <g filter="url(#filter1_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint2_linear_821_1681)"
+                    ></circle>
+                  </g>
+                  <g filter="url(#filter2_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint3_linear_821_1681)"
+                      stroke-width="15"
+                    ></circle>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="preloader-text">
+        Loading<span class="preloader-text-dots">...</span>
+      </div>
+    </div>
+
+    <!-- Add scrollable content sections -->
+    <div
+      style="
+        height: 100vh;
+        background: linear-gradient(45deg, #1a1a2e, #16213e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+      "
+    >
+      <div>
+        <h2 style="margin-bottom: 1rem; font-size: 3rem">
+          Scroll Test Section 1
+        </h2>
+        <p style="font-size: 1.5rem; opacity: 0.8">
+          Move your mouse and scroll to see the profile image animation
+        </p>
+        <p style="font-size: 1.2rem; opacity: 0.6; margin-top: 1rem">
+          The image should respond to your scroll position
+        </p>
+      </div>
+    </div>
+
+    <div
+      style="
+        height: 100vh;
+        background: linear-gradient(45deg, #16213e, #0f3460);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+      "
+    >
+      <div>
+        <h2 style="margin-bottom: 1rem; font-size: 3rem">Keep Scrolling</h2>
+        <p style="font-size: 1.5rem; opacity: 0.8">
+          Notice how the profile image changes size and opacity
+        </p>
+        <p style="font-size: 1.2rem; opacity: 0.6; margin-top: 1rem">
+          The image should be getting smaller and more transparent
+        </p>
+      </div>
+    </div>
+
+    <div
+      style="
+        height: 100vh;
+        background: linear-gradient(45deg, #0f3460, #533483);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+      "
+    >
+      <div>
+        <h2 style="margin-bottom: 1rem; font-size: 3rem">Final Test Section</h2>
+        <p style="font-size: 1.5rem; opacity: 0.8">
+          The profile image should be smaller and more transparent now
+        </p>
+        <p style="font-size: 1.2rem; opacity: 0.6; margin-top: 1rem">
+          Try moving your mouse to see the subtle following effect
+        </p>
+      </div>
+    </div>
+
+    <div
+      style="
+        height: 100vh;
+        background: linear-gradient(45deg, #533483, #7b2cbf);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+      "
+    >
+      <div>
+        <h2 style="margin-bottom: 1rem; font-size: 3rem">End of Test</h2>
+        <p style="font-size: 1.5rem; opacity: 0.8">
+          You've reached the end of the scrollable area
+        </p>
+        <p style="font-size: 1.2rem; opacity: 0.6; margin-top: 1rem">
+          Scroll back up to see the reverse animation
+        </p>
+      </div>
+    </div>
+
+    <div class="page-overlay">
+      <div class="page-overlay-layer-1"></div>
+      <div class="page-overlay-layer-2"></div>
+    </div>
+
+    <script
+      id="hs-script-loader"
+      type="text/javascript"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/143671043.js"
+    ></script>
+
+    <!-- Add SVG element here -->
+    <img
+      id="profile-silhouette"
+      src="/images/profile-silhouette.svg"
+      alt="Profile Silhouette"
+      style="display: none"
+    />
+	
+	<div class="ca-container">
+  <div class="ca-coming-soon">
+    <a href="#" class="ca-button">CA: 4SUseTDGaWtMtFQFV9pt9bD4MGc1qFR4XeMqy3CYpump</a>
+  </div>
+  <button class="copy-button" title="Copy to clipboard">
+    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+      <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </button>
+</div>
+	
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const copyButton = document.querySelector('.copy-button');
+    const caContainer = document.querySelector('.ca-container');
+    
+    // Wait for preloader to finish
+    function waitForPreloader() {
+      const preloader = document.querySelector('.preloader');
+      if (!preloader) {
+        showButtons();
+        return;
+      }
+
+      // Create observer to watch preloader opacity
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+            const opacity = parseFloat(preloader.style.opacity);
+            if (opacity === 0) {
+              setTimeout(() => showButtons(), 500); // Show after preloader fade
+              observer.disconnect();
+            }
+          }
+        });
+      });
+
+      observer.observe(preloader, {
+        attributes: true,
+        attributeFilter: ['style']
+      });
+    }
+
+    function showButtons() {
+      caContainer.classList.add('visible');
+    }
+
+    // Start waiting for preloader
+    waitForPreloader();
+    
+    copyButton.addEventListener('click', function() {
+      // Copy only "Coming Soon" to clipboard
+      navigator.clipboard.writeText('Coming Soon')
+        .then(() => {
+          // Visual feedback for successful copy
+          copyButton.classList.add('copied');
+          copyButton.innerHTML = '<svg class="copy-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          
+          // Revert after 2 seconds
+          setTimeout(() => {
+            copyButton.classList.remove('copied');
+            copyButton.innerHTML = '<svg class="copy-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/></svg>';
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+    });
+  });
+</script>
+  </body>
+</html>

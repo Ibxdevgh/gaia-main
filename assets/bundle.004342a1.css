@@ -1,0 +1,71 @@
+.js-design-toggle {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5000;
+    pointer-events: none;
+    outline: dotted 1px white
+}
+
+.js-design-toggle img {
+    width: 100%;
+    max-width: none;
+    height: auto
+}
+
+@media (max-width: 799px) {
+    .js-design-toggle {
+        display: block
+    }
+    .js-design-toggle .col-span-1:not(:nth-child(8n+1)) {
+        display: none
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        position: fixed;
+        inset: 0;
+        overflow: hidden
+    }
+}
+
+body.is-scroll-native [data-scroll-item] {
+    visibility: visible !important;
+    transform: none !important
+}
+
+body.is-scroll-native.menu-is-open [data-scroll-item] {
+    opacity: 0
+}
+
+[data-scroll-item] {
+    position: relative
+}
+
+@media (min-width: 800px) {
+    [data-scroll] {
+        position: absolute;
+        top: 0;
+        width: 100%
+    }
+    [data-scroll-shim] [data-scroll-item] {
+        position: static
+    }
+    [data-scroll-item]>*,
+    [data-carousel-item]>* {
+        will-change: transform
+    }
+}
+
+[data-carousel],
+[data-carousel-item] {
+    display: flex;
+    flex-wrap: nowrap
+}
+
+[data-carousel] [data-carousel-item] {
+    flex: 0 0 auto
+}

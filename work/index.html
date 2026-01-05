@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      if (localStorage.getItem("consentMode") === null) {
+        gtag("consent", "default", {
+          functionality_storage: "denied",
+          security_storage: "denied",
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          personalization: "denied",
+        });
+      } else {
+        gtag(
+          "consent",
+          "default",
+          JSON.parse(localStorage.getItem("consentMode"))
+        );
+      }
+    </script>
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NTXJ6R88");
+    </script>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v2.10.15" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#1e1e1e"
+    />
+    <link
+      href="/favicon-dark.ico"
+      rel="icon"
+      type="image/x-icon"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      href="/favicon-light.ico"
+      rel="icon"
+      type="image/x-icon"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta name="msapplication-TileColor" content="#1e1e1e" />
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#1e1e1e" />
+    <title>Engaged | Work</title>
+    <meta
+      name="description"
+      content="We are a leading omnichannel brand activation agency helping brands get results by engaging with people in memorable experiences."
+    />
+    <meta
+      name="keywords"
+      content="Omnichannel brand activation agency, Omnichannel merkactivatie bureau, Engaged, Engaged Agency, Brand Activation, Digital Activation, Trade Marketing, Experiential marketing."
+    />
+
+    <meta property="og:image" content="/images/seo/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:title" content="Engaged | Work" />
+    <meta
+      property="og:description"
+      content="We are a leading omnichannel brand activation agency helping brands get results by engaging with people in memorable experiences."
+    />
+
+    <link rel="stylesheet" href="/assets/bundle.004342a1.css" />
+    <link rel="stylesheet" href="/assets/bundle.d9303d95.css" />
+    <link rel="stylesheet" href="/assets/bundle.147b5f6e.css" />
+    <link rel="stylesheet" href="/assets/bundle.8f89c102.css" />
+    <script type="module" src="/assets/bundle.c2377b65.js"></script>
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NTXJ6R88"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <div id="gl">
+      <div class="gl-main-bubble"></div>
+      <div class="gl-image"></div>
+      <div class="gl-landing-image"></div>
+    </div>
+
+    <header class="header">
+      <div class="header-bg"></div>
+      <div class="header-scroll-top"></div>
+
+      <div class="wrap--wide">
+        <div class="header-toggle">
+          <button class="button" aria-label="Open menu">
+            <span class="button-gradient"></span>
+            <span class="button-bg"></span>
+            <span class="button-text-outer">
+              <span class="button-text">
+                <span class="button-text--open">
+                  <span class="button-text-static">Menu</span>
+                  <span class="button-text-hover">Menu</span>
+                </span>
+
+                <span class="button-text button-text--close">
+                  <span class="button-text-static">Close</span>
+                  <span class="button-text-hover">Close</span>
+                </span>
+              </span>
+            </span>
+
+            <span class="button-icon button-icon--menu">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-dasharray="12 0"
+                ></path>
+                <path
+                  d="M0 6H12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="header-logo">
+          <a href="/" class="logo" aria-label="GAIA">
+            <img src="/images/gaia-logo.svg" alt="GAIA" width="120" height="20">
+          </a>
+        </div>
+        <div class="header-nav">
+          <nav class="nav">
+            <div class="nav-cta">
+              <a
+                href="/contact"
+                class="button button--green button button--xs"
+                aria-label="Get in touch"
+              >
+                <span class="button-gradient"></span>
+                <span class="button-bg"></span>
+
+                <span class="button-text">
+                  <span class="button-text-static">Get in touch</span>
+                  <span class="button-text-hover">Get in touch</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="nav-lang">
+              <a
+                href="/nl"
+                data-router-ignore
+                class="button button--outlined button button--xs"
+                aria-label="Language toggle"
+              >
+                <span class="button-gradient"></span>
+                <span class="button-bg"></span>
+
+                <span class="button-text">
+                  <span class="button-text-static">nl</span>
+                  <span class="button-text-hover">nl</span>
+                </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="cookies" style="opacity: 0; pointer-events: none">
+      <div class="wrap--narrow">
+        <div class="cookies-banner">
+          <div class="cookies-banner-text">
+            <p>
+              This website uses cookies to ensure you get the best experience.
+              Read all about it in our
+              <a href="/privacy-policy" data-router-ignore>privacy policy</a>.
+            </p>
+          </div>
+          <div class="cookies-banner-buttons">
+            <a
+              href="#"
+              class="button button--purple button button--xs"
+              aria-label="Accept"
+            >
+              <span class="button-gradient"></span>
+              <span class="button-bg"></span>
+
+              <span class="button-text">
+                <span class="button-text-static">Accept</span>
+                <span class="button-text-hover">Accept</span>
+              </span>
+            </a>
+            <a
+              href="#"
+              class="button button--grey button button--xs"
+              aria-label="Refuse"
+            >
+              <span class="button-gradient"></span>
+              <span class="button-bg"></span>
+
+              <span class="button-text">
+                <span class="button-text-static">Refuse</span>
+                <span class="button-text-hover">Refuse</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-main">
+      <main class="page-main-inner">
+        <div class="work" data-view="work" style="opacity: 0">
+          <div class="work-gallery" data-category="">
+            <div class="work-gallery-bg"></div>
+            <div class="wrap">
+              <div class="grid grid-cols-12 gap-24 work-gallery-items">
+                <div class="work-gallery-item" id="gift-the-power-of-play">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/gift-the-power-of-play-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/gift-the-power-of-play-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/gift-the-power-of-play-sm.jpg"
+                        alt="Gift the power of Play"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">The LEGO Group</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span>Gift</span><span> </span><span>the</span
+                        ><span> </span><span>power</span> </span
+                      ><span class="line" data-split-char-line>
+                        <span><em>of</em></span
+                        ><span> </span><span><em>Play</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>3DOOH</li>
+                      <li>Immersive advertising</li>
+                      <li>Digital campaign</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/gift-the-power-of-play"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="step-into-the-dream-world">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/step-into-the-dream-world-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/step-into-the-dream-world-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/step-into-the-dream-world-sm.jpg"
+                        alt="Step into The Dream World Thumbnail"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">The LEGO Group</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span>Step</span><span> </span><span>into</span> </span
+                      ><span class="line" data-split-char-line>
+                        <span><em>The</em></span
+                        ><span> </span><span><em>Dream</em></span
+                        ><span> </span><span><em>World</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>Augmented Reality</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>3DOOH</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/step-into-the-dream-world"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="a-new-world-of-friends">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/a-new-world-of-friends-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/a-new-world-of-friends-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/a-new-world-of-friends-sm.jpg"
+                        alt="A New World of Friends Thumbnail"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">The LEGO Group</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span><em>A</em></span
+                        ><span> </span><span><em>New</em></span
+                        ><span> </span><span><em>World</em></span> </span
+                      ><span class="line" data-split-char-line>
+                        <span>of</span><span> </span><span>Friends</span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>Virtual Reality</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Experiential Marketing</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/a-new-world-of-friends"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="the-legend-of-tarzan">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/the-legend-of-tarzan-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/the-legend-of-tarzan-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/the-legend-of-tarzan-sm.jpg"
+                        alt="The Legend of Tarzan"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">Warner Bros.</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span><em>The</em></span
+                        ><span> </span><span><em>Legend</em></span> </span
+                      ><span class="line" data-split-char-line>
+                        <span>of</span><span> </span><span>Tarzan</span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>DOOH</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Social</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/the-legend-of-tarzan"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div
+                  class="work-gallery-item"
+                  id="king-arthur-legend-of-the-sword"
+                >
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/king-arthur-legend-of-the-sword-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/king-arthur-legend-of-the-sword-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/king-arthur-legend-of-the-sword-sm.jpg"
+                        alt="King Arthur - Legend of the Sword"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">Warner Bros.</span>
+                    <h1 class="case-study-header-title ts-1 -sm">
+                      <span class="line" data-split-char-line>
+                        <span><em>King</em></span
+                        ><span> </span><span><em>Arthur</em></span> </span
+                      ><span class="line" data-split-char-line>
+                        <span>Legend</span><span> </span><span>of</span
+                        ><span> </span><span>the</span><span> </span
+                        ><span>Sword</span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>OOH</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Digital Campaign</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/king-arthur-legend-of-the-sword"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div
+                  class="work-gallery-item"
+                  id="flagship-store-opening-amsterdam"
+                >
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/flagship-store-opening-amsterdam-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/flagship-store-opening-amsterdam-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/flagship-store-opening-amsterdam-sm.jpg"
+                        alt="Flagship Store Opening Amsterdam"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">The LEGO Group</span>
+                    <h1 class="case-study-header-title ts-1 -md">
+                      <span class="line" data-split-char-line>
+                        <span><em>Flagship</em></span
+                        ><span> </span><span>Store</span> </span
+                      ><span class="line" data-split-char-line>
+                        <span>Opening</span><span> </span
+                        ><span><em>Amsterdam</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>OOH</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Experiential Marketing</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/flagship-store-opening-amsterdam"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="kingsman-the-take-over">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/kingsman-the-take-over-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/kingsman-the-take-over-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/kingsman-the-take-over-sm.jpg"
+                        alt="Kingsman - The take-over"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">20th Century Fox</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span>Kingsman</span> </span
+                      ><span class="line" data-split-char-line>
+                        <span><em>The</em></span
+                        ><span> </span><span><em>take-over</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>Brand Activation</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Digital Campaign</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/kingsman-the-take-over"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="the-ar-playbook">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/the-ar-playbook-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/the-ar-playbook-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/the-ar-playbook-sm.jpg"
+                        alt="The AR Playbook"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">Intertoys</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span>The</span><span> </span><span><em>AR</em></span
+                        ><span> </span><span><em>Playbook</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>Augmented Reality</li>
+                      <li>Brand Activation</li>
+                      <li>Ecomm</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/the-ar-playbook"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="level-up-your-mobile">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/level-up-your-mobile-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/level-up-your-mobile-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/level-up-your-mobile-sm.jpg"
+                        alt="Level up Your Mobile"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">KBC Bank</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span><em>Level</em></span
+                        ><span> </span><span><em>up</em></span> </span
+                      ><span class="line" data-split-char-line>
+                        <span>Your</span><span> </span><span>Mobile</span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>Social</li>
+                      <li>Interactive Video</li>
+                      <li>Digital Activation</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/level-up-your-mobile"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="kbc-assist">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="/images/uploads/thumbnail/sm/kbc-assist-sm.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="/images/uploads/thumbnail/sm/kbc-assist-sm.jpg"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/kbc-assist-sm.jpg"
+                        alt="KBC Assist"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">KBC Bank</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span>KBC</span><span> </span
+                        ><span><em>Assist</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>Gamification</li>
+                      <li>Digital Activation</li>
+                      <li>Social Campaign</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/kbc-assist"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="unleash-the-dragon">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/unleash-the-dragon-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/unleash-the-dragon-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/unleash-the-dragon-sm.jpg"
+                        alt="Unleash The Dragon"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">The LEGO Group</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span>Unleash</span> </span
+                      ><span class="line" data-split-char-line>
+                        <span><em>The</em></span
+                        ><span> </span><span><em>Dragon</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>3DOOH</li>
+                      <li>Immersive advertising</li>
+                      <li>Digital campaign</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/unleash-the-dragon"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="trolls-the-movie">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/trolls-the-movie-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/trolls-the-movie-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/trolls-the-movie-sm.jpg"
+                        alt="Trolls - The Movie"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">DreamWorks</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span><em>Trolls</em></span
+                        ><span> </span><span>The</span><span> </span
+                        ><span>Movie</span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>OOH</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Influencer</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/trolls-the-movie"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="snake-challenge">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/snake-challenge-sm.webp
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          /images/uploads/thumbnail/sm/snake-challenge-sm.jpg
+                        "
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/snake-challenge-sm.jpg"
+                        alt="Snake Challenge"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">HMD Global</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span><em>Snake</em></span
+                        ><span> </span><span><em>Challenge</em></span>
+                      </span>
+                    </h1>
+                    <ul class="case-study-header-tags tags">
+                      <li>In-store experience</li>
+                      <li>Omnichannel Brand Activation</li>
+                      <li>Branded Content</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/work/snake-challenge"
+                    data-transition="work"
+                    class="button button--primary button button--md"
+                    aria-label="Open case study"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Open case study</span>
+                      <span class="button-text-hover">Open case study</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="work-gallery-item" id="nda">
+                  <div class="work-gallery-item-image lg:hidden">
+                    <picture>
+                      <source
+                        srcset="/images/uploads/thumbnail/sm/nda-sm.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="/images/uploads/thumbnail/sm/nda-sm.jpg"
+                        type="image/jpeg"
+                      />
+                      <img
+                        src="/images/uploads/thumbnail/sm/nda-sm.jpg"
+                        alt="NDA"
+                      />
+                    </picture>
+                  </div>
+                  <div class="case-study-header-text">
+                    <span class="ts-label">Various Clients</span>
+                    <h1 class="case-study-header-title ts-1">
+                      <span class="line" data-split-char-line>
+                        <span><em>Under</em></span
+                        ><span> </span><span>NDA</span>
+                      </span>
+                    </h1>
+                  </div>
+                  <a
+                    href="/contact"
+                    class="button button--primary button button--md"
+                    aria-label="Get in touch"
+                  >
+                    <span class="button-gradient"></span>
+                    <span class="button-bg"></span>
+
+                    <span class="button-text">
+                      <span class="button-text-static">Get in touch</span>
+                      <span class="button-text-hover">Get in touch</span>
+                    </span>
+
+                    <span class="button-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="12"
+                          fill="var(--button-icon-bg)"
+                        ></circle>
+                        <path
+                          d="M11 15L14 12L11 9"
+                          stroke="var(--button-icon-color)"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-design-toggle" style="opacity: 0">
+            <img src="/images/dev/work-m.webp" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <nav class="menu" style="pointer-events: none">
+      <div class="menu-outer" style="opacity: 0">
+        <div class="menu-inner">
+          <ul class="menu-ul">
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/vision"
+                data-link-slug="vision"
+                data-transition="menu"
+                aria-label="Go to vision page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Vision</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Vision</span
+                >
+              </a>
+            </li>
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/work"
+                data-link-slug="work"
+                data-transition="menu"
+                aria-label="Go to work page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Work</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Work</span
+                >
+              </a>
+            </li>
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/services"
+                data-link-slug="services"
+                data-transition="menu"
+                aria-label="Go to services page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Services</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Services</span
+                >
+              </a>
+            </li>
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/careers"
+                data-link-slug="careers"
+                data-transition="menu"
+                aria-label="Go to careers page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Careers</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Careers</span
+                >
+              </a>
+            </li>
+            <li class="menu-li">
+              <a
+                class="menu-a"
+                href="/contact"
+                data-link-slug="contact"
+                data-transition="menu"
+                aria-label="Go to contact page"
+              >
+                <span
+                  class="menu-a-hover em"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Get in touch</span
+                >
+                <span
+                  class="menu-a-static"
+                  data-split-chars
+                  data-split-chars-wrap
+                  >Get in touch</span
+                >
+              </a>
+            </li>
+          </ul>
+          <div class="menu-footer">
+            <div class="wrap--wide">
+              <div class="menu-footer-left">
+                <div class="menu-footer-copyright">
+                  Copyright © 2025 Engaged. All Rights Reserved
+                </div>
+                <div class="menu-footer-privacy">
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+              </div>
+              <div class="menu-footer-right">
+                <div class="socials">
+                  <div class="ts-eyebrown">Follow us</div>
+                  <ul class="socials-ul">
+                    <li class="socials-li">
+                      <a
+                        href="https://x.com/gaia_assistant"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="socials-a"
+                        aria-label="Twitter/X"
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.902 8.98L19.35 0h-1.764L11.1 7.784L6.65 0H0l7.808 11.162L0 20.5h1.764l6.84-7.744L13.35 20.5H20l-8.098-11.52zm-2.42 2.74l-.794-1.134L2.32 1.5h2.72l5.092 7.288.794 1.134L16.36 19.25h-2.72L9.482 11.72z"
+                            fill="currentColor"
+                          ></path></svg
+                      ></a>
+                    </li>
+                    <li class="socials-li">
+                      <a
+                        href="https://www.askgaia.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="socials-a"
+                        aria-label="GAIA Chat"
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L17.7071 16.2929C17.8946 16.4804 17.9914 16.7348 17.9914 17C17.9914 17.5523 17.5437 18 16.9914 18H10C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2ZM7 8C6.44772 8 6 8.44772 6 9C6 9.55228 6.44772 10 7 10C7.55228 10 8 9.55228 8 9C8 8.44772 7.55228 8 7 8ZM10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8ZM13 8C12.4477 8 12 8.44772 12 9C12 9.55228 12.4477 10 13 10C13.5523 10 14 9.55228 14 9C14 8.44772 13.5523 8 13 8Z"
+                            fill="currentColor"
+                          ></path></svg
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-overlay">
+        <div class="menu-overlay-layer"></div>
+        <div class="menu-overlay-layer"></div>
+        <div class="menu-overlay-layer"></div>
+      </div>
+    </nav>
+    <div class="preloader" style="opacity: 0">
+      <div class="preloader-icon">
+        <div class="preloader-icon-outer">
+          <div class="preloader-icon-inner">
+            <picture>
+              <source
+                class="preloader-icon-fallback"
+                srcset="/images/template/preloader-circle.webp"
+                type="image/webp"
+              />
+              <img
+                class="preloader-icon-fallback"
+                src="/images/template/preloader-circle.png"
+                alt="Preloader circle"
+              />
+            </picture>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="266"
+              height="266"
+              viewBox="0 0 266 266"
+              fill="none"
+            >
+              <path
+                class="preloader-icon-logo"
+                d="M126.912 111C127.2 111.517 127.47 112.203 127.721 113.051C127.971 113.902 128.187 114.797 128.368 115.74C128.547 116.682 128.694 117.595 128.8 118.485C128.91 119.371 128.961 120.113 128.961 120.701C128.961 122.586 128.691 124.267 128.153 125.745C127.611 127.222 126.938 128.581 126.126 129.82C125.317 131.058 124.433 132.213 123.481 133.286C122.528 134.358 121.644 135.449 120.835 136.557C120.026 137.665 119.35 138.85 118.809 140.105C118.268 141.361 118 142.768 118 144.319C118 149.044 121.676 151 125.084 151C129.842 151 133.394 148.825 134.957 144.623C135.504 143.152 135.893 141.583 136.037 139.884C136.181 138.185 136.198 136.633 136.091 135.227L141.653 149.806H148.4L133.659 111H126.912ZM134.741 137.331C134.741 138.403 134.652 139.568 134.471 140.823C134.29 142.079 133.964 143.261 133.446 144.343C132.778 145.734 131.115 148.14 128.101 148.14C126.589 148.14 125.427 147.67 124.618 146.727C123.809 145.785 123.403 144.555 123.403 143.04C123.403 141.302 123.789 139.603 124.563 137.939C125.337 136.276 126.163 134.53 127.047 132.701C127.928 130.871 128.711 128.895 129.396 126.77C130.078 124.646 130.332 122.234 130.153 119.537C130.729 121.014 131.287 122.465 131.828 123.889C132.37 125.313 132.853 126.744 133.288 128.185C133.72 129.627 134.071 131.096 134.341 132.594C134.612 134.092 134.747 135.67 134.747 137.334L134.741 137.331Z"
+                fill="#FCFEEA"
+              ></path>
+              <g class="preloader-icon-circles-outer">
+                <g class="preloader-icon-circles-inner">
+                  <circle
+                    class="preloader-icon-circle"
+                    cx="133"
+                    cy="133"
+                    r="59.5"
+                    stroke="url(#paint0_linear_821_1681)"
+                  ></circle>
+                  <g filter="url(#filter0_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint1_linear_821_1681)"
+                    ></circle>
+                  </g>
+                  <g filter="url(#filter1_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint2_linear_821_1681)"
+                    ></circle>
+                  </g>
+                  <g filter="url(#filter2_f_821_1681)">
+                    <circle
+                      class="preloader-icon-circle"
+                      cx="133"
+                      cy="133"
+                      r="59.5"
+                      stroke="url(#paint3_linear_821_1681)"
+                      stroke-width="15"
+                    ></circle>
+                  </g>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_821_1681"
+                  x="57"
+                  y="57"
+                  width="152"
+                  height="152"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="8"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter1_f_821_1681"
+                  x="65"
+                  y="65"
+                  width="136"
+                  height="136"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="4"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter2_f_821_1681"
+                  x="0.5"
+                  y="0.5"
+                  width="265"
+                  height="265"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  ></feFlood>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  ></feBlend>
+                  <feGaussianBlur
+                    stdDeviation="32.5"
+                    result="effect1_foregroundBlur_821_1681"
+                  ></feGaussianBlur>
+                </filter>
+                <linearGradient
+                  class="preloader-icon-gradient"
+                  id="paint0_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  class="preloader-icon-gradient"
+                  id="paint1_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  class="preloader-icon-gradient"
+                  id="paint2_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+                <linearGradient
+                  class="preloader-icon-gradient"
+                  id="paint3_linear_821_1681"
+                  x1="73"
+                  y1="73"
+                  x2="193"
+                  y2="73"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7672FF"></stop>
+                  <stop offset="0.265625" stop-color="#BDB4F5"></stop>
+                  <stop offset="0.515625" stop-color="#FCFEEA"></stop>
+                  <stop offset="0.765625" stop-color="#00F0FF"></stop>
+                  <stop offset="1" stop-color="#7672FF"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="preloader-text">
+        Loading<span class="preloader-text-dots">...</span>
+      </div>
+    </div>
+
+    <div class="page-overlay">
+      <div class="page-overlay-layer-1"></div>
+      <div class="page-overlay-layer-2"></div>
+    </div>
+
+    <script
+      id="hs-script-loader"
+      type="text/javascript"
+      async
+      defer
+      src="//js-eu1.hs-scripts.com/143671043.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+.tp-dfwv {
+    position: fixed !important;
+    z-index: 9999;
+    draggable: true;
+    opacity: .1 !important;
+    transition: opacity .3s linear
+}
+
+.tp-dfwv:hover {
+    opacity: 1 !important
+}
+
+#debug {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    z-index: 1000;
+    margin: 8px;
+    resize: both;
+    opacity: .1;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: opacity .3s linear
+}
+
+#debug:hover {
+    opacity: 1
+}
+
+.save-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 11000;
+    appearance: none;
+    width: var(--leva-sizes-rootWidth);
+    font-family: var(--leva-fonts-mono);
+    font-size: var(--leva-fontSizes-root);
+    color: var(--leva-colors-folderTextColor);
+    background-color: var(--leva-colors-elevation1);
+    text-align: center;
+    border-radius: var(--leva-radii-lg);
+    height: var(--leva-sizes-titleBarHeight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}

@@ -1,0 +1,18 @@
+#editor {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    z-index: 1000;
+    margin: 8px;
+    resize: both;
+    opacity: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: opacity .3s linear
+}
+
+#editor:hover {
+    opacity: 1
+}
